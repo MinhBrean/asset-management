@@ -1,1 +1,23 @@
-{"name": "backend", "private": true, "dependencies": {"@nestjs/common": "^8.0.0", "@nestjs/core": "^8.0.0", "@nestjs/jwt": "^8.0.0", "@nestjs/passport": "^8.0.0", "bcrypt": "^5.0.0", "passport": "^0.4.0", "passport-jwt": "^4.0.0", "prisma": "^2.30.0", "@prisma/client": "^2.30.0", "express": "^4.17.1"}, "devDependencies": {"typescript": "^4.3.5", "ts-jest": "^27.0.0", "jest": "^27.0.0"}}
+{
+  "name": "your-app-name",
+  "version": "1.0.0",
+  "scripts": {
+    "start:dev": "nodemon dist/main",
+    "build": "tsc",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate deploy",
+    "seed": "ts-node prisma/seed.ts"
+  },
+  "dependencies": {
+    "@nestjs/common": "^10.0.0",
+    "@nestjs/core": "^10.0.0",
+    "@nestjs/platform-express": "^10.0.0",
+    "@prisma/client": "^5.0.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.0.0",
+    "typescript": "^5.0.0",
+    "@nestjs/cli": "^10.0.0",
+    "prisma": "^5.0.0"
+  }
+}
